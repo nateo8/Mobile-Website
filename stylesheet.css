@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.header-center img {
+    max-height: 85px;
+}
+
+nav {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+nav a {
+    color: black;
+    margin: 0 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 0;
+}
+
+.introduction h1 {
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+.introduction p {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+main {
+    padding: 2em;
+}
+
+#portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+footer {
+    border-top: 3px solid black;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-weight: normal;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+#contact {
+    background-color: white;
+    padding: 20px 0 50px 20px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-center {
+        order: 1;
+    }
+
+    nav.main-nav {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    #portfolio {
+        grid-template-columns: 1fr;
+    }
+}
+
